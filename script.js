@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const featureCards = document.querySelectorAll(".feature-card");
 
   let lastScroll = 0;
-
-  const body = document.querySelector('body');
-
-  const overlay = document.querySelector('.nav-overlay');
-
   // Navigation scroll effect
   function handleNavScroll() {
     const currentScroll = window.pageYOffset;
@@ -38,9 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMobileMenu() {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
-    overlay.classList.toggle('active');
-    body.classList.toggle('menu-open');
-  }
+    }
 
   function closeMobileMenu() {
     hamburger.classList.remove("active");
