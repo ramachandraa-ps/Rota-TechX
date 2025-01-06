@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lastScroll = 0;
 
+  const body = document.querySelector('body');
+
+  const overlay = document.querySelector('.nav-overlay');
+
   // Navigation scroll effect
   function handleNavScroll() {
     const currentScroll = window.pageYOffset;
@@ -34,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMobileMenu() {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
+    overlay.classList.toggle('active');
+    body.classList.toggle('menu-open');
   }
 
   function closeMobileMenu() {
@@ -166,4 +172,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 250);
 
   window.addEventListener("resize", resizeHandler);
+
+  // Close mobile menu when clicking a link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      body.classList.remove('menu-open');
+    });
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      body.classList.remove('menu-open');
+    }
+  });
+
+  // Close mobile menu when clicking overlay
+  overlay.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.classList.remove('menu-open');
+  });
+
+  const closeBtn = document.querySelector('.nav-close');
+  
+  // Close button functionality
+  closeBtn.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.classList.remove('menu-open');
+  });
 });
