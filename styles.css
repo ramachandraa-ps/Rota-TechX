@@ -771,3 +771,136 @@ section.hero {
         gap: 2rem;
     }
 }
+/* Floating Icons Container */
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Individual Icon Styles */
+.floating-icon {
+    position: absolute;
+    opacity: 0.15;
+    transform-origin: center;
+    color: var(--primary-color);
+    z-index: -1;
+}
+
+/* Define different sizes for icons */
+.icon-xs { font-size: 1rem; }
+.icon-sm { font-size: 1.5rem; }
+.icon-md { font-size: 2.5rem; }
+.icon-lg { font-size: 3.5rem; }
+.icon-xl { font-size: 4.5rem; }
+
+/* Animation Keyframes */
+@keyframes float-up {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes float-down {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(0) rotate(-360deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes float-left {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateX(-50px) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-100px) rotate(360deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes float-right {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateX(50px) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(100px) rotate(-360deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.15;
+    }
+}
+
+/* Pattern Grid */
+.pattern-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, var(--primary-color) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--primary-color) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .floating-icon {
+        display: none;
+    }
+    
+    .floating-icon:nth-child(-n+12) {
+        display: block; /* Show only first 12 icons on mobile */
+    }
+    
+    .icon-xl { font-size: 3rem; }
+    .icon-lg { font-size: 2.5rem; }
+    .icon-md { font-size: 1.8rem; }
+    .icon-sm { font-size: 1.2rem; }
+    .icon-xs { font-size: 0.8rem; }
+}
