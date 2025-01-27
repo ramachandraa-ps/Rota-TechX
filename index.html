@@ -41,13 +41,32 @@
     <section class="hero" id="hero" style="margin-top: 4rem">
       <div class="hero-content">
         <h1>Rota-TechX</h1>
-        <h2>Tamil Nadu's Premier Hackathon</h2>
-        <div class="event-time">February 24-25, 2024</div>
+        <h2>#INNOVATEFORIMPACT</h2>
+        <div class="event-time">March 29 - 30, 2025</div>
         <div class="cta-buttons">
           <button class="primary-btn">Apply Now</button>
           <button class="secondary-btn">JOIN OUR COMMUNITY</button>
         </div>
+        <div class="countdown-container">
+          <div class="countdown-item">
+            <span id="days">00</span>
+            <span class="label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span id="hours">00</span>
+            <span class="label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span id="minutes">00</span>
+            <span class="label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span id="seconds">00</span>
+            <span class="label">Seconds</span>
+          </div>
+        </div>
       </div>
+      <!-- COUNTDOWN -->
       <div class="floating-icons">
         <!-- Left Side Icons -->
         <i class="fas fa-code floating-icon icon-lg" style="left: 5%; top: 15%; animation: float-up 8s infinite alternate;"></i>
@@ -97,7 +116,10 @@
             <h2 class="section-title">About Rota-TechX</h2>
             <div class="about-grid">
                 <div class="about-content">
-                    <p>Join us for Tamil Nadu's most innovative hackathon where technology meets creativity. Over 36 hours, participants will collaborate, innovate, and build solutions that matter.</p>
+                    <p>Rota-TechX is a 24 hours intercollegiate technical hack and make-athon hosted by
+                        Rotaract Club of Sri Venkateswara College of Engineering. In this Rota-TechX, the
+                        participants are made to choose the problem statements on the Rotary’s 7 Areas of
+                        Focus and develop a solution which creates an impact for this society. This event involves pitching in the solution as a product in front of elite panelists.</p>
                     <div class="stats-container">
                         <div class="stat-item">
                             <span class="stat-number">500+</span>
@@ -108,7 +130,7 @@
                             <span class="stat-label">Prize Pool</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">36</span>
+                            <span class="stat-number">24</span>
                             <span class="stat-label">Hours</span>
                         </div>
                     </div>
@@ -226,6 +248,37 @@
         </div>
     </section>
 
+    <script>
+      // Countdown Timer
+      function updateCountdown() {
+        const targetDate = new Date('March 24, 2025 00:00:00').getTime();
+        
+        function update() {
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById('days').textContent = days.toString().padStart(2, '0');
+          document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+          document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+          document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+          if (distance < 0) {
+            clearInterval(timerInterval);
+            document.querySelector('.countdown-container').innerHTML = '<div class="expired">Event has started!</div>';
+          }
+        }
+
+        update();
+        const timerInterval = setInterval(update, 1000);
+      }
+
+      document.addEventListener('DOMContentLoaded', updateCountdown);
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
