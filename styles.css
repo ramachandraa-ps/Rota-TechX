@@ -1180,3 +1180,110 @@ section.hero {
         width: 85%;
     }
 }
+
+.coming-soon-container {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.coming-soon-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.coming-soon-subtext {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards 0.5s;
+}
+
+.glowing-line {
+    width: 150px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+    margin: 0 auto;
+    position: relative;
+    animation: lineGlow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px rgba(67, 97, 238, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 30px rgba(60, 223, 255, 0.5);
+    }
+}
+
+@keyframes lineGlow {
+    0%, 100% {
+        width: 150px;
+        opacity: 0.5;
+    }
+    50% {
+        width: 200px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .coming-soon-container {
+        min-height: 300px;
+        padding: 3rem 1rem;
+    }
+
+    .coming-soon-text {
+        font-size: 3.5rem;
+        letter-spacing: -1px;
+    }
+
+    .coming-soon-subtext {
+        font-size: 1.2rem;
+    }
+
+    .glowing-line {
+        width: 100px;
+    }
+
+    @keyframes lineGlow {
+        0%, 100% {
+            width: 100px;
+        }
+        50% {
+            width: 150px;
+        }
+    }
+}
