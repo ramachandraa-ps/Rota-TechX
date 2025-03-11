@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function toggleMobileMenu() {
     hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
-    }
+  }
 
   function closeMobileMenu() {
     hamburger.classList.remove("active");
@@ -167,38 +167,232 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", resizeHandler);
 
   // Close mobile menu when clicking a link
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      body.classList.remove('menu-open');
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      body.classList.remove("menu-open");
     });
   });
 
   // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target) && navLinks.classList.contains('active')) {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-      body.classList.remove('menu-open');
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && navLinks.classList.contains("active")) {
+      hamburger.classList.remove("active");
+      navLinks.classList.remove("active");
+      body.classList.remove("menu-open");
     }
   });
 
   // Close mobile menu when clicking overlay
-  overlay.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
-    overlay.classList.remove('active');
-    body.classList.remove('menu-open');
+  overlay.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    body.classList.remove("menu-open");
   });
 
-  const closeBtn = document.querySelector('.nav-close');
-  
+  const closeBtn = document.querySelector(".nav-close");
+
   // Close button functionality
-  closeBtn.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
-    overlay.classList.remove('active');
-    body.classList.remove('menu-open');
+  closeBtn.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    body.classList.remove("menu-open");
+  });
+});
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let intervals = {}; // Store intervals for each card
+
+const domainData = [
+  {
+    name: "Peacebuilding and Conflict Prevention",
+    link: "https://example.com/first",
+    description: "Fostering peace and resilience through conflict prevention, social harmony, and inclusive dialogue",
+    image: "assets/images/black-background.jpg",
+    logo: "assets/images/Peace-purple.ico",
+  },
+  {
+    name: "Disease Prevention and Treatment",
+    link: "https://example.com/second",
+    description: "Enhancing healthcare through disease prevention, improved treatments, and strengthened infrastructure",
+    image: "assets/images/black-background-inverse.jpg",
+    logo: "assets/images/Disease-prevention.ico",
+  },
+  {
+    name: "Water, Sanitation, and Hygiene",
+    link: "https://example.com/third",
+    description: "Ensuring clean water, sanitation, and hygiene for better public health and well-being.",
+    image: "assets/images/black-background-port.jpg",
+    logo: "assets/images/water-sanitation.ico",
+  },
+  {
+    name: "Maternal and Child Health",
+    link: "https://example.com/fourth",
+    description: "Promoting maternal and child health through better care, nutrition, and development.",
+    image: "assets/images/black-background.jpg",
+    logo: "assets/images/fourth-domain.ico",
+  },
+  {
+    name: "Basic Education and Literacy",
+    link: "https://example.com/fifth",
+    description: "Empowering through quality education, literacy, and skill development for all.",
+    image: "assets/images/black-background-inverse.jpg",
+    logo: "assets/images/fifth-domain.ico",
+  },
+  {
+    name: "Community Economic Development",
+    link: "https://example.com/sixth",
+    description: "Driving growth through entrepreneurship, financial inclusion, and job creation.",
+    image: "assets/images/black-background.jpg",
+    logo: "assets/images/sixth-domain.ico",
+  },
+  {
+    name: "Supporting the Environment",
+    link: "https://example.com/seventh",
+    description: "Advancing sustainability through climate action, conservation, and resource management.",
+    image: "assets/images/black-background.jpg",
+    logo: "assets/images/seventh-domain.ico",
+  },
+];
+
+function createScreenElement(data) {
+  const screen = document.createElement("div");
+  screen.classList.add("screen");
+
+  const screenImage = document.createElement("div");
+  screenImage.classList.add("screen-image");
+  screenImage.style.backgroundImage = `url("${data.image}")`;
+  screen.appendChild(screenImage);
+
+  const screenOverlay = document.createElement("div");
+  screenOverlay.classList.add("screen-overlay");
+  screen.appendChild(screenOverlay);
+
+  const screenContent = document.createElement("div");
+  screenContent.classList.add("screen-content");
+  screen.appendChild(screenContent);
+
+  // Replace Font Awesome icon with image
+  const screenIcon = document.createElement("img");
+  screenIcon.classList.add("screen-icon");
+  screenIcon.src = data.logo; // Set the src attribute to the ICO path
+  screenIcon.alt = data.name + " Logo"; // Add alt text for accessibility
+
+  screenContent.appendChild(screenIcon);
+
+  const screenUser = document.createElement("div");
+  screenUser.classList.add("screen-user");
+  screenContent.appendChild(screenUser);
+
+  const nameSpan = document.createElement("span");
+  nameSpan.classList.add("name");
+  nameSpan.dataset.value = data.name;
+  nameSpan.textContent = data.name;
+  screenUser.appendChild(nameSpan);
+
+  const linkElement = document.createElement("a");
+  linkElement.classList.add("link");
+  linkElement.href = data.link;
+  linkElement.target = "_blank";
+  linkElement.textContent = data.description;
+  linkElement.setAttribute("aria-label", `Visit ${data.name}`);
+  screenUser.appendChild(linkElement);
+
+  screen.addEventListener("mouseenter", handleMouseEnter);
+  screen.addEventListener("mouseleave", handleMouseLeave);
+
+  return screen;
+}
+
+function handleMouseEnter(event) {
+  const screen = event.currentTarget;
+  const nameSpan = screen.querySelector(".name");
+
+  if (!nameSpan) return;
+
+  let iteration = 0;
+  const cardIndex = Array.from(domainGrid.children).indexOf(screen);
+
+  if (intervals[cardIndex]) {
+    clearInterval(intervals[cardIndex]);
+  }
+
+  intervals[cardIndex] = setInterval(() => {
+    nameSpan.innerText = nameSpan.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return nameSpan.dataset.value[index];
+        }
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= nameSpan.dataset.value.length) {
+      clearInterval(intervals[cardIndex]);
+    }
+    iteration += 1 / 3;
+  }, 30);
+}
+
+function handleMouseLeave(event) {
+  const screen = event.currentTarget;
+  const nameSpan = screen.querySelector(".name");
+  const cardIndex = Array.from(domainGrid.children).indexOf(screen);
+
+  if (!nameSpan) return;
+
+  if (intervals[cardIndex]) {
+    clearInterval(intervals[cardIndex]);
+    nameSpan.innerText = nameSpan.dataset.value;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const domainGrid = document.getElementById("domainGrid");
+
+  domainData.forEach((data) => {
+    const screenElement = createScreenElement(data);
+    domainGrid.appendChild(screenElement);
+  });
+});
+
+
+// Script for the Timeline Section
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Fade-in Animation Logic
+  const timelineItems = document.querySelectorAll(".Timeline-grid ul li");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+        observer.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.2 // Trigger when 20% of the element is visible
+  });
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+
+  // Timeline Toggle (Expand/Collapse) Logic
+  const timelineItemsToggle = document.querySelectorAll(".Timeline-grid ul li");
+
+  timelineItemsToggle.forEach(item => {
+    const toggleButton = item.querySelector(".timeline-toggle");
+
+    toggleButton.addEventListener("click", function() {
+      item.classList.toggle("expanded");
+      const expanded = item.classList.contains("expanded");
+      toggleButton.setAttribute("aria-expanded", expanded); //Update aria attribute
+    });
   });
 });

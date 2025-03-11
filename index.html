@@ -4,38 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rota-TechX Hackathon</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+
   </head>
   <body>
     <nav>
-        <div class="nav-content">
-            <div class="logo-text">
-                <img src="logo.png" alt="Rota-TechX Logo" class="logo-img" />
-            </div>
-            
-            <!-- Hamburger Menu -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-    
-            <!-- Navigation Links -->
-            <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#problemstatements">Problem Statements</a></li>
-                <li><a href="#speakers">Speakers</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
+      <div class="nav-content">
+        <div class="logo-text">
+          <img src="logo.png" alt="Rota-TechX Logo" class="logo-img" />
         </div>
-        <!-- Mobile Overlay -->
-        <div class="mobile-overlay"></div>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#problemstatements">Problem Statements</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <!-- Mobile Overlay -->
+      <div class="mobile-overlay"></div>
     </nav>
 
     <section class="hero" id="hero" style="margin-top: 4rem">
@@ -43,8 +41,18 @@
         <h1>Rota-TechX</h1>
         <h2>#INNOVATEFORIMPACT</h2>
         <div class="event-time">April 12 - 13, 2025</div>
+
+      
         <div class="cta-buttons">
-          <button class="primary-btn">Apply Now</button>
+            <div>
+                <!-- <button class="primary-btn">Apply Now</button> -->
+                <div 
+                class="apply-button " 
+                data-hackathon-slug="rotatechx-1" 
+                data-button-theme="light" 
+                style="height: 44px; width: 312px; background-color: linear-gradient(135deg, #4361ee, #56cfe1)!important;">      
+                </div>
+            </div>
           <button class="secondary-btn">JOIN OUR COMMUNITY</button>
         </div>
         <div class="countdown-container">
@@ -69,94 +77,205 @@
       <!-- COUNTDOWN -->
       <div class="floating-icons">
         <!-- Left Side Icons -->
-        <i class="fas fa-code floating-icon icon-lg" style="left: 5%; top: 15%; animation: float-up 8s infinite alternate;"></i>
-        <i class="fas fa-robot floating-icon icon-md" style="left: 12%; top: 45%; animation: float-down 7s infinite alternate;"></i>
-        <i class="fas fa-microchip floating-icon icon-sm" style="left: 8%; bottom: 30%; animation: float-up 6s infinite alternate;"></i>
-        <i class="fas fa-terminal floating-icon icon-xl" style="left: 15%; bottom: 60%; animation: float-right 9s infinite alternate;"></i>
-        <i class="fas fa-wifi floating-icon icon-xs" style="left: 20%; top: 25%; animation: pulse 4s infinite;"></i>
-        
+        <i
+          class="fas fa-code floating-icon icon-lg"
+          style="left: 5%; top: 15%; animation: float-up 8s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-robot floating-icon icon-md"
+          style="left: 12%; top: 45%; animation: float-down 7s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-microchip floating-icon icon-sm"
+          style="left: 8%; bottom: 30%; animation: float-up 6s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-terminal floating-icon icon-xl"
+          style="left: 15%; bottom: 60%; animation: float-right 9s infinite alternate"
+        ></i>
+        <i class="fas fa-wifi floating-icon icon-xs" style="left: 20%; top: 25%; animation: pulse 4s infinite"></i>
+
         <!-- Right Side Icons -->
-        <i class="fas fa-database floating-icon icon-lg" style="right: 5%; top: 20%; animation: float-down 7s infinite alternate;"></i>
-        <i class="fas fa-cloud floating-icon icon-xl" style="right: 12%; top: 50%; animation: float-left 8s infinite alternate;"></i>
-        <i class="fas fa-mobile-alt floating-icon icon-sm" style="right: 8%; bottom: 35%; animation: float-up 6s infinite alternate;"></i>
-        <i class="fas fa-laptop-code floating-icon icon-md" style="right: 15%; bottom: 55%; animation: float-down 7s infinite alternate;"></i>
-        <i class="fas fa-signal floating-icon icon-xs" style="right: 20%; top: 30%; animation: pulse 5s infinite;"></i>
-        
+        <i
+          class="fas fa-database floating-icon icon-lg"
+          style="right: 5%; top: 20%; animation: float-down 7s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-cloud floating-icon icon-xl"
+          style="right: 12%; top: 50%; animation: float-left 8s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-mobile-alt floating-icon icon-sm"
+          style="right: 8%; bottom: 35%; animation: float-up 6s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-laptop-code floating-icon icon-md"
+          style="right: 15%; bottom: 55%; animation: float-down 7s infinite alternate"
+        ></i>
+        <i class="fas fa-signal floating-icon icon-xs" style="right: 20%; top: 30%; animation: pulse 5s infinite"></i>
+
         <!-- Center Area Icons -->
-        <i class="fas fa-brain floating-icon icon-lg" style="left: 45%; top: 10%; animation: float-up 8s infinite alternate;"></i>
-        <i class="fas fa-network-wired floating-icon icon-md" style="right: 45%; top: 15%; animation: float-down 9s infinite alternate;"></i>
-        <i class="fas fa-code-branch floating-icon icon-sm" style="left: 48%; bottom: 20%; animation: float-left 7s infinite alternate;"></i>
-        <i class="fas fa-server floating-icon icon-md" style="right: 48%; bottom: 25%; animation: float-right 8s infinite alternate;"></i>
-        
+        <i
+          class="fas fa-brain floating-icon icon-lg"
+          style="left: 45%; top: 10%; animation: float-up 8s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-network-wired floating-icon icon-md"
+          style="right: 45%; top: 15%; animation: float-down 9s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-code-branch floating-icon icon-sm"
+          style="left: 48%; bottom: 20%; animation: float-left 7s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-server floating-icon icon-md"
+          style="right: 48%; bottom: 25%; animation: float-right 8s infinite alternate"
+        ></i>
+
         <!-- Additional Tech Icons -->
-        <i class="fas fa-bug floating-icon icon-xs" style="left: 25%; top: 35%; animation: pulse 6s infinite;"></i>
-        <i class="fas fa-qrcode floating-icon icon-sm" style="right: 25%; top: 40%; animation: float-down 7s infinite alternate;"></i>
-        <i class="fas fa-hashtag floating-icon icon-md" style="left: 30%; bottom: 45%; animation: float-right 8s infinite alternate;"></i>
-        <i class="fas fa-sitemap floating-icon icon-lg" style="right: 30%; bottom: 40%; animation: float-left 9s infinite alternate;"></i>
-        
+        <i class="fas fa-bug floating-icon icon-xs" style="left: 25%; top: 35%; animation: pulse 6s infinite"></i>
+        <i
+          class="fas fa-qrcode floating-icon icon-sm"
+          style="right: 25%; top: 40%; animation: float-down 7s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-hashtag floating-icon icon-md"
+          style="left: 30%; bottom: 45%; animation: float-right 8s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-sitemap floating-icon icon-lg"
+          style="right: 30%; bottom: 40%; animation: float-left 9s infinite alternate"
+        ></i>
+
         <!-- Small Decorative Icons -->
-        <i class="fas fa-dot-circle floating-icon icon-xs" style="left: 35%; top: 55%; animation: pulse 4s infinite;"></i>
-        <i class="fas fa-square floating-icon icon-xs" style="right: 35%; top: 60%; animation: pulse 5s infinite;"></i>
-        <i class="fas fa-circle floating-icon icon-xs" style="left: 40%; bottom: 50%; animation: pulse 6s infinite;"></i>
-        <i class="fas fa-cube floating-icon icon-sm" style="right: 40%; bottom: 55%; animation: float-up 7s infinite alternate;"></i>
-        
+        <i class="fas fa-dot-circle floating-icon icon-xs" style="left: 35%; top: 55%; animation: pulse 4s infinite"></i>
+        <i class="fas fa-square floating-icon icon-xs" style="right: 35%; top: 60%; animation: pulse 5s infinite"></i>
+        <i class="fas fa-circle floating-icon icon-xs" style="left: 40%; bottom: 50%; animation: pulse 6s infinite"></i>
+        <i
+          class="fas fa-cube floating-icon icon-sm"
+          style="right: 40%; bottom: 55%; animation: float-up 7s infinite alternate"
+        ></i>
+
         <!-- Additional Corner Icons -->
-        <i class="fas fa-brackets floating-icon icon-md" style="left: 2%; top: 2%; animation: float-right 8s infinite alternate;"></i>
-        <i class="fas fa-fingerprint floating-icon icon-lg" style="right: 2%; top: 2%; animation: float-left 9s infinite alternate;"></i>
-        <i class="fas fa-atom floating-icon icon-md" style="left: 2%; bottom: 2%; animation: float-up 7s infinite alternate;"></i>
-        <i class="fas fa-shield-alt floating-icon icon-lg" style="right: 2%; bottom: 2%; animation: float-down 8s infinite alternate;"></i>
-        
+        <i
+          class="fas fa-brackets floating-icon icon-md"
+          style="left: 2%; top: 2%; animation: float-right 8s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-fingerprint floating-icon icon-lg"
+          style="right: 2%; top: 2%; animation: float-left 9s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-atom floating-icon icon-md"
+          style="left: 2%; bottom: 2%; animation: float-up 7s infinite alternate"
+        ></i>
+        <i
+          class="fas fa-shield-alt floating-icon icon-lg"
+          style="right: 2%; bottom: 2%; animation: float-down 8s infinite alternate"
+        ></i>
+
         <!-- Pattern Grid -->
         <div class="pattern-grid"></div>
-    </div>
+      </div>
     </section>
+    <div class="space_it"></div>
 
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About Rota-TechX</h2>
-            <div class="about-grid">
-                <div class="about-content">
-                    <p>Rota-TechX is a 24 hours intercollegiate technical hack and make-athon hosted by
-                        Rotaract Club of Sri Venkateswara College of Engineering. In this Rota-TechX, the
-                        participants are made to choose the problem statements on the Rotary’s 7 Areas of
-                        Focus and develop a solution which creates an impact for this society. This event involves pitching in the solution as a product in front of elite panelists.</p>
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <span class="stat-number">200+</span>
-                            <span class="stat-label">Participants</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">₹3L</span>
-                            <span class="stat-label">Prize Pool</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24</span>
-                            <span class="stat-label">Hours</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">About Rota-TechX</h2>
+        <div class="about-grid">
+          <div class="about-content">
+            <p>
+              Rota-TechX is a 24 hours intercollegiate technical hack and make-athon hosted by Rotaract Club of Sri
+              Venkateswara College of Engineering. In this Rota-TechX, the participants are made to choose the problem
+              statements on the Rotary’s 7 Areas of Focus and develop a solution which creates an impact for this society.
+              This event involves pitching in the solution as a product in front of elite panelists.
+            </p>
+            <div class="stats-container">
+              <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Participants</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">₹3L</span>
+                <span class="stat-label">Prize Pool</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Hours</span>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    
+    <div class="space_it"></div>
+
     <section class="problemstatements" id="problemstatements">
-        <div class="container">
-            <h2 class="section-title">Problem Statements</h2>
-            <div class="coming-soon-container">
+      <div class="container">
+        <h2 class="section-title">Problem Statements</h2>
+        <!-- <div class="coming-soon-container">
                 <div class="coming-soon-content">
                     <h2 class="coming-soon-text">COMING SOON</h2>
                     <div class="coming-soon-subtext">Stay tuned for exciting challenges!</div>
                     <div class="glowing-line"></div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        <div class="problemstatements-grid" id="domainGrid"></div>
+      </div>
     </section>
-    
+    <div class="space_it"></div>
+
+    <section class="Timeline" id="Timeline">
+      <div class="container">
+        <h2 class="section-title">Timeline</h2>
+        <br />
+        <br />
+        <div class="Timeline-grid">
+          <ul>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">15/3/25</div>
+              <div class="title">Hackathon Registration and Idea Submission Opens</div>
+              <div class="descr">
+                Participants can start registering and submitting their innovative ideas for the hackathon.
+              </div>
+            </li>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">4/4/25</div>
+              <div class="title">Idea Submission Date Ends</div>
+              <div class="descr">Last date for participants to submit their ideas for evaluation.</div>
+            </li>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">6/4/25</div>
+              <div class="title">Announcement of Shortlisted Teams</div>
+              <div class="descr">The teams selected for the hackathon will be announced.</div>
+            </li>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">7/4/25</div>
+              <div class="title">Team RSVP</div>
+              <div class="descr">Shortlisted teams must confirm their participation.</div>
+            </li>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">12/4/25</div>
+              <div class="title">Hackathon Start Date</div>
+              <div class="descr">The hackathon officially begins.</div>
+            </li>
+            <li style="--accent-color: #3cdfff">
+              <div class="date">13/4/25</div>
+              <div class="title">Hackathon End Date</div>
+              <div class="descr">The hackathon concludes, and project submissions are closed.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="space_it"></div>
+
     <section class="speakers" id="speakers">
-        <div class="container">
-            <h2 class="section-title">Featured Speakers</h2>
-            <div class="speakers-grid">
-                <!-- <div class="speaker-card">
+      <div class="container">
+        <h2 class="section-title">Featured Speakers</h2>
+        <div class="speakers-grid">
+          <!-- <div class="speaker-card">
                     <img src="/api/placeholder/300/300" alt="Speaker 1" class="speaker-img">
                     <h3>Dr. Sarah Johnson</h3>
                     <p class="speaker-role">AI Research Director, Google</p>
@@ -171,153 +290,212 @@
                     <h3>Priya Mehta</h3>
                     <p class="speaker-role">Senior Engineer, Amazon</p>
                 </div> -->
-                <div class="coming-soon-container">
-                    <div class="coming-soon-content">
-                        <h2 class="coming-soon-text">COMING SOON</h2>
-                        <div class="coming-soon-subtext">Stay tuned</div>
-                        <div class="glowing-line"></div>
-                    </div>
-                </div>
+          <div class="coming-soon-container">
+            <div class="coming-soon-content">
+              <h2 class="coming-soon-text">COMING SOON</h2>
+              <div class="coming-soon-subtext">Stay tuned</div>
+              <div class="glowing-line"></div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    
+    <div class="space_it"></div>
+
     <section class="partners" id="partners">
-        <div class="container">
-            <h2 class="section-title">Our Partners</h2>
-            <div class="partners-grid">
-                <div class="coming-soon-container">
-                    <div class="coming-soon-content">
-                        <h2 class="coming-soon-text">COMING SOON</h2>
-                        <div class="coming-soon-subtext">Stay tuned for our amazing partners!</div>
-                        <div class="glowing-line"></div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Our Sponsors</h2>
+        <div class="partners-grid">
+          <div class="partner-category">
+            <div class="partner-category-title coming-soon-subtext">Gold Sponsors</div>
+            <div class="glowing-line"></div>
+            <div class="partner-logos">
+              <div class="logo-container">
+                <a href="https://devfolio.co/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/images/Devfolio_Logo-Colored.svg"
+                    alt="DEVFOLIO LOGO"
+                    class="partner-logo"
+                    style="max-width: 300px; background-color: white; padding: 10px"
+                  />
+                </a>
+              </div>
+              <div class="logo-container">
+                <a href="https://ethindia.co/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/images/ethindia-dark.svg"
+                    alt="ETHINDIA LOGO"
+                    class="partner-logo"
+                    style="max-width: 300px; background-color: white; padding: 10px"
+                  />
+                </a>
+              </div>
+              <div class="logo-container">
+                <div >
+                <a href="https://edwiseinternational.com/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    src="assets/images/Picture1.png"
+                    alt="Edwise"
+                    class="partner-logo"
+                    style="max-width: 200px; background-color: white; padding: 10px"
+                  />
+                </a>
+              </div>
             </div>
+          </div>
+
+          <div class="partner-category">
+            <div class="partner-category-title coming-soon-subtext">Silver Sponsors</div>
+            <div class="glowing-line"></div>
+            <div class="partner-logos">
+              <a href="https://www.aeccglobal.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="assets/images/aecc.jpg"
+                  alt="AECC"
+                  class="partner-logo"
+                  style="max-width: 300px; background-color: white; padding: 10px"
+                />
+              </a>
+            </div>
+          </div>
         </div>
+        
+      </div>
     </section>
+    <div class="space_it"></div>
 
     <section class="faq-section" id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Who can participate?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Any college student can participate.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Is there a registration fee?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>There will be no registration fee.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Does this hackathon cover both software and hardware projects?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>I am a newbie, can I hack?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely!</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What should I bring for the hackathon?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Student ID, laptops, gadgets and anything else you want to work on.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Will there be WiFi facility?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, we will provide WiFi facility throughout the event.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I participate without a team?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No, this is a team event. Teams should consist of 4-6 members.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Will you sponsor our travel costs?</h3>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No, we do not reimburse the travel costs.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Who can participate?</h3>
+              <span class="faq-toggle">+</span>
             </div>
+            <div class="faq-answer">
+              <p>Any college student can participate.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Is there a registration fee?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>There will be no registration fee.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Does this hackathon cover both software and hardware projects?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>I am a newbie, can I hack?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely!</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What should I bring for the hackathon?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Student ID, laptops, gadgets and anything else you want to work on.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Will there be WiFi facility?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we will provide WiFi facility throughout the event.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I participate without a team?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>No, this is a team event. Teams should consist of 4-6 members.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Will you sponsor our travel costs?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>No, we do not reimburse the travel costs.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
+    <div class="space_it"></div>
 
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section venue">
-                <h3>Venue</h3>
-                <div class="venue-details">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>
-                        YuniQ<br>
-                        4th Floor, Phase 2, Ticel Bio Park,<br>
-                        Chennai – 600113<br>
-                        India<br>
-                    </p>
-                </div>
-            </div>
-            
-            <div class="footer-section socials">
-                <h3>Connect With Us</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/rotatechx?igsh=MzNvOTllcnA4MDAy" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/rotaract-club-of-sri-venkateswara-college-of-engineering/" class="social-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div class="contact-email">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:rotatechx@gmail.com">rotatechx@gmail.com</a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section venue">
+          <h3>Venue</h3>
+          <div class="venue-details">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>
+              YuniQ<br />
+              4th Floor, Phase 2, Ticel Bio Park,<br />
+              Chennai – 600113<br />
+              India<br />
+            </p>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Rota-TechX. All rights reserved.</p>
+
+        <div class="footer-section socials">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/rotatechx?igsh=MzNvOTllcnA4MDAy"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/rotaract-club-of-sri-venkateswara-college-of-engineering/"
+              class="social-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="contact-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:rotatechx@gmail.com">rotatechx@gmail.com</a>
+          </div>
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Rota-TechX. All rights reserved.</p>
+      </div>
     </footer>
 
     <script>
       // Countdown Timer
       function updateCountdown() {
-        const targetDate = new Date('April 12, 2025 00:00:00').getTime();
-        
+        const targetDate = new Date("April 12, 2025 00:00:00").getTime();
+
         function update() {
           const now = new Date().getTime();
           const distance = targetDate - now;
@@ -327,14 +505,14 @@
           const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
           const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-          document.getElementById('days').textContent = days.toString().padStart(2, '0');
-          document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-          document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-          document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+          document.getElementById("days").textContent = days.toString().padStart(2, "0");
+          document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+          document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+          document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
 
           if (distance < 0) {
             clearInterval(timerInterval);
-            document.querySelector('.countdown-container').innerHTML = '<div class="expired">Event has started!</div>';
+            document.querySelector(".countdown-container").innerHTML = '<div class="expired">Event has started!</div>';
           }
         }
 
@@ -342,8 +520,10 @@
         const timerInterval = setInterval(update, 1000);
       }
 
-      document.addEventListener('DOMContentLoaded', updateCountdown);
+      document.addEventListener("DOMContentLoaded", updateCountdown);
     </script>
     <script src="script.js"></script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+
   </body>
 </html>
