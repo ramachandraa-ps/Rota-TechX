@@ -16,6 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  user-select: none;
 }
 
 body {
@@ -23,9 +24,9 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+
 }
 
-/* Navigation Base Styles */
 nav {
   position: fixed;
   top: 0;
@@ -67,7 +68,7 @@ nav {
 }
 
 .nav-links li a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -109,7 +110,7 @@ nav {
 }
 
 .nav-btn::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1872,10 +1873,10 @@ h1 {
 
 ul {
   --col-gap: 2rem;
-  --row-gap: 2rem;
+  --row-gap: 8rem;
   --line-w: 0.25rem;
   display: grid;
-  grid-template-columns: var(--line-w) 1fr; /* Default: Line + Content */
+ /* grid-template-columns: var(--line-w) 1fr;*/ /* Default: Line + Content */
   grid-auto-columns: max-content;
   column-gap: var(--col-gap);
   list-style: none;
@@ -1978,11 +1979,13 @@ ul li .descr {
 }
 
 ul li .title {
-  overflow: hidden;
+
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
+
+
 
 ul li .descr {
   padding-block-end: 1.5rem;
@@ -1995,7 +1998,6 @@ ul li .descr::before {
   content: "";
   position: absolute;
   width: 90%;
-  height: 0.5rem;
   background: rgba(0, 0, 0, 0.5);
   left: 50%;
   border-radius: 50%;
@@ -2101,8 +2103,8 @@ ul li .descr::before {
 
 /* Description Visibility */
 ul li .descr {
-  max-height: 0;
-  overflow: hidden;
+  /*max-height: 0;
+  overflow: hidden;*/
   transition: max-height 0.3s ease;
 }
 
