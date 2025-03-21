@@ -205,58 +205,58 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let intervals = {}; // Store intervals for each card
-
+/*
 const domainData = [
   {
     name: "Peacebuilding and Conflict Prevention",
     link: "https://example.com/first",
     description: "Fostering peace and resilience through conflict prevention, social harmony, and inclusive dialogue",
     image: "assets/images/black-background.jpg",
-    logo: "assets/images/Peace-purple.ico",
+    logo: "assets/images/AOF_peace_white_no_title.png",
   },
   {
     name: "Disease Prevention and Treatment",
     link: "https://example.com/second",
     description: "Enhancing healthcare through disease prevention, improved treatments, and strengthened infrastructure",
     image: "assets/images/black-background-inverse.jpg",
-    logo: "assets/images/Disease-prevention.ico",
+    logo: "assets/images/AOF_disease_white_no_title.png",
   },
   {
     name: "Water, Sanitation, and Hygiene",
     link: "https://example.com/third",
     description: "Ensuring clean water, sanitation, and hygiene for better public health and well-being.",
     image: "assets/images/black-background-port.jpg",
-    logo: "assets/images/water-sanitation.ico",
+    logo: "assets/images/AOF_water_white_no_title.png",
   },
   {
     name: "Maternal and Child Health",
     link: "https://example.com/fourth",
     description: "Promoting maternal and child health through better care, nutrition, and development.",
     image: "assets/images/black-background.jpg",
-    logo: "assets/images/fourth-domain.ico",
+    logo: "assets/images/AOF_maternal_white_no_title.png",
   },
   {
     name: "Basic Education and Literacy",
     link: "https://example.com/fifth",
     description: "Empowering through quality education, literacy, and skill development for all.",
     image: "assets/images/black-background-inverse.jpg",
-    logo: "assets/images/fifth-domain.ico",
+    logo: "assets/images/AOF_education_white_no_title.png",
   },
   {
     name: "Community Economic Development",
     link: "https://example.com/sixth",
     description: "Driving growth through entrepreneurship, financial inclusion, and job creation.",
     image: "assets/images/black-background.jpg",
-    logo: "assets/images/sixth-domain.ico",
+    logo: "assets/images/AOF_economic_white_no_title.png",
   },
   {
     name: "Supporting the Environment",
     link: "https://example.com/seventh",
     description: "Advancing sustainability through climate action, conservation, and resource management.",
     image: "assets/images/black-background.jpg",
-    logo: "assets/images/seventh-domain.ico",
+    logo: "assets/images/AOF_environment_white_no_title.png",
   },
-];
+];*/
 
 function createScreenElement(data) {
   const screen = document.createElement("div");

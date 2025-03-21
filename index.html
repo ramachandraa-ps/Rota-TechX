@@ -9,10 +9,14 @@
 
   </head>
   <body>
+    <video autoplay muted loop id="bg-video">
+      <source src="assets/images/videoplayback.mp4" type="video/mp4">
+  </video>
+
     <nav>
       <div class="nav-content">
         <div class="logo-text">
-          <img src="logo.png" alt="Rota-TechX Logo" class="logo-img" />
+          <img src="assets/images/logo.png" alt="Rota-TechX Logo" class="logo-img" />
         </div>
 
         <!-- Hamburger Menu -->
@@ -207,17 +211,111 @@
 
     <section class="problemstatements" id="problemstatements">
       <div class="container">
-        <h2 class="section-title">Problem Statements</h2>
-        <!-- <div class="coming-soon-container">
-                <div class="coming-soon-content">
-                    <h2 class="coming-soon-text">COMING SOON</h2>
-                    <div class="coming-soon-subtext">Stay tuned for exciting challenges!</div>
-                    <div class="glowing-line"></div>
+          <h2 class="section-title">Problem Statements</h2>
+          <div class="problemstatements-grid" id="domainGrid">
+             
+              <!-- Card 1 -->
+              <div class="problem-card">
+
+                  <div class="card-inner">
+                      <!-- Front: Image -->
+                      <div class="card-face front">
+                          <img src="assets/images/pea.jpeg" alt="Front Image">
+                      </div>
+                      <!-- Back: Logo + Description -->
+                      <div class="card-face back">
+                          <img src="assets/images/AOF_peace_white_no_title.png" alt="Logo">
+                          <p>Building peaceful and resilient communities is essential for global stability. This domain focuses on initiatives that prevent conflicts, promote social harmony, and foster inclusive dialogue. Participants can develop solutions that contribute to peace, security, and justice.
+                            </p>
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- Card 2 -->
+              <div class="problem-card">
+                  <div class="card-inner">
+                      <div class="card-face front">
+                          <img src="assets/images/dis.jpeg" alt="Front Image">
+                      </div>
+                      <div id="bg" class="card-face back">
+                          <img src="assets/images/AOF_disease_white_no_title.png" alt="Logo">
+                          <p>Access to quality healthcare is a fundamental need. This domain addresses efforts to prevent diseases, improve treatment methods, and strengthen healthcare infrastructure. Projects can focus on innovative approaches to enhance public health and medical accessibility.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="problem-card">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="assets/images/wat.jpeg" alt="Front Image">
+                    </div>
+                    <div class="card-face back">
+                        <img src="assets/images/AOF_water_white_no_title.png" alt="Logo">
+                        <p> Clean water and proper sanitation are critical for human well-being. This domain emphasizes ensuring access to safe drinking water, improving sanitation facilities, and spreading hygiene awareness. Any solution that contributes to better water management and public health is welcome.
+                        </p>
+                    </div>
                 </div>
-            </div> -->
-        <div class="problemstatements-grid" id="domainGrid"></div>
+            </div>
+            <div class="problem-card">
+              <div class="card-inner">
+                  <div class="card-face front">
+                      <img src="assets/images/maternal.jpeg" alt="Front Image">
+                  </div>
+                  <div class="card-face back">
+                      <img src="assets/images/AOF_maternal_white_no_title.png" alt="Logo">
+                      <p>Ensuring the well-being of mothers and children is vital for a healthier society. This domain focuses on reducing maternal and infant mortality, improving healthcare access for mothers, and promoting child nutrition and development. Participants can explore various projects that support this cause.
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="problem-card">
+            <div class="card-inner">
+                <div class="card-face front">
+                    <img src="assets/images/edu.jpeg" alt="Front Image">
+                </div>
+                <div class="card-face back">
+                    <img src="assets/images/AOF_education_white_no_title.png" alt="Logo">
+                    <p>Education is a powerful tool for empowerment and progress. This domain promotes quality education, literacy, and skill development for all. Any project that enhances learning opportunities, supports teachers, or improves educational accessibility falls under this category.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="problem-card">
+          <div class="card-inner">
+              <div class="card-face front">
+                  <img src="assets/images/eco.jpeg" alt="Front Image">
+              </div>
+              <div class="card-face back">
+                  <img src="assets/images/AOF_economic_white_no_title.png" alt="Logo">
+                  <p>Strong economies create thriving communities. This domain encourages initiatives that boost entrepreneurship, financial inclusion, and job creation. Solutions that empower local businesses, promote economic self-sufficiency, and foster innovation are part of this focus area.
+                  </p>
+              </div>
+          </div>
       </div>
-    </section>
+      <div class="problem-card">
+        <div class="card-inner">
+            <div class="card-face front">
+                <img src="assets/images/envi.jpeg" alt="Front Image">
+            </div>
+            <div class="card-face back">
+                <img src="assets/images/AOF_environment_white_no_title.png" alt="Logo">
+                <p> A sustainable future requires action today. This domain focuses on addressing environmental challenges like climate change, conservation, and sustainable resource management. Any project that contributes to ecological preservation and sustainability is encouraged.
+                </p>
+            </div>
+        </div>
+    </div>
+  
+              <!-- Add more cards as needed -->
+  
+          </div>
+      </div>
+      
+  </section>
+  
+    
+    
+    
+    
     <div class="space_it"></div>
 
     <section class="Timeline" id="Timeline">
@@ -297,6 +395,35 @@
     </section> --> 
     <div class="space_it"></div>
 
+    <section class="team-section">
+      <h2 class="section-title">Our Team</h2>
+      <div class="team-container">
+          <div class="team-member">
+              <img src="assets/images/ak.jpeg" alt="Team Member">
+              <div class="member-info">
+                  <h3>AKSHAY G</h3>
+                  <p>Web Designer</p>
+              </div>
+          </div>
+          <div class="team-member">
+              <img src="member2.jpg" alt="Team Member">
+              <div class="member-info">
+                  <h3>Jane Smith</h3>
+                  <p>UI/UX Designer</p>
+              </div>
+          </div>
+          <div class="team-member">
+              <img src="member3.jpg" alt="Team Member">
+              <div class="member-info">
+                  <h3>Michael Lee</h3>
+                  <p>Data Scientist</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <div class="space_it"></div>
+
     <section class="partners" id="partners">
       <div class="container">
         <h2 class="section-title">Our Sponsors</h2>
@@ -359,10 +486,10 @@
             <div class="partner-logos">
               <a href="https://yuniq.co/" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="assets/images/venue.png"
+                  src="assets/images/yuniq.png"
                   alt="AECC"
                   class="partner-logo"
-                  style="max-width: 300px; background-color: rgb(10, 10, 10); padding: 10px"
+                  style="max-width: 300px;background-color: white; padding: 10px"
                 />
               </a>
             </div>
@@ -372,10 +499,12 @@
       </div>
     </section>
     <div class="space_it"></div>
-
+  
+   
+   
     <section class="faq-section" id="faq">
       <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title">Frequently Asked Question</h2>
         <div class="faq-grid">
           <div class="faq-item">
             <div class="faq-question">
@@ -383,7 +512,8 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>Any college student can participate.</p>
+              <p>Any undergrade student is eligible to participate in the hackathon.
+              </p>
             </div>
           </div>
           <div class="faq-item">
@@ -392,7 +522,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>There will be no registration fee.</p>
+              <p>No, there is no registration fee for this event.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -401,7 +531,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>Yes.</p>
+              <p>Yes, participants can work on both software and hardware projects.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -410,7 +540,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>Absolutely!</p>
+              <p>Absolutely! Beginners are welcome, and this is a great opportunity to learn and collaborate.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -419,7 +549,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>Student ID, laptops, gadgets and anything else you want to work on.</p>
+              <p>  Please bring your student ID, laptop, necessary gadgets, and any other materials you may need for your project.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -428,7 +558,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>Yes, we will provide WiFi facility throughout the event.</p>
+              <p>Yes, we will provide WiFi access throughout the event.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -437,7 +567,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>No, this is a team event. Teams should consist of 4-6 members.</p>
+              <p> No, this is a team-based event. Each team must consist of 4 to 6 members.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -446,7 +576,7 @@
               <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-              <p>No, we do not reimburse the travel costs.</p>
+              <p>Unfortunately, we do not provide reimbursement for travel expenses.</p>
             </div>
           </div>
         </div>
@@ -456,20 +586,27 @@
 
     <footer class="footer">
       <div class="footer-content">
-        <div class="footer-section venue">
-          <h3>Venue</h3>
+      
+          <div class="footer-section socials">
+          <h3>Contact Us</h3>
           <div class="venue-details">
-            <i class="fas fa-map-marker-alt"></i>
-            <p>
-              YuniQ<br />
-              4th Floor, Phase 2, Ticel Bio Park,<br />
-              Chennai – 600113<br />
-              India<br />
+            <p>Aditya Vardan R S <br>
+              <i class="fas fa-mobile-alt"></i>
+              <a>+91 73582 60050<br></a>
+              <br>
+              Ashwin R <br>
+              <i class="fas fa-mobile-alt"></i>
+              <a>+91 70108 62355<br></a>
+              <br>
+              Shree Dharshan<br>
+              <i class="fas fa-mobile-alt"></i>
+              <a> +91 63741 41227<br></a>
             </p>
           </div>
+          
         </div>
 
-        <div class="footer-section socials">
+       <div class="footer-section socials">
           <h3>Connect With Us</h3>
           <div class="social-links">
             <a
@@ -493,7 +630,21 @@
             <i class="fas fa-envelope"></i>
             <a href="mailto:rotatechx@gmail.com">rotatechx@gmail.com</a>
           </div>
+        </div> 
+
+        <div class="footer-section venue">
+          <h3>Venue</h3>
+          <div class="venue-details">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>
+              YuniQ<br />
+              4th Floor, Phase 2, Ticel Bio Park,<br />
+              Chennai – 600113<br />
+              India<br />
+            </p>
+          </div>
         </div>
+
         <div class="footer-section map">
           <h3>Find Us on Map</h3>
           <div class="map-container">
@@ -508,6 +659,8 @@
           </div>
         </div>
       </div>
+      
+      
       <div class="footer-bottom">
         <p>&copy; 2025 Rota-TechX. All rights reserved.</p>
       </div>
@@ -546,6 +699,25 @@
     </script>
     <script src="script.js"></script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+    <script>
+      let lastFlippedCard = null; // Store the last flipped card
+  
+      document.querySelectorAll(".problem-card").forEach(card => {
+          card.addEventListener("mouseenter", function () {
+              // If the card has already flipped, do nothing
+              if (this.classList.contains("flipped")) return;
+  
+              // Reset the last flipped card
+              if (lastFlippedCard) {
+                  lastFlippedCard.classList.remove("flipped");
+              }
+  
+              // Flip the new card
+              this.classList.add("flipped");
+              lastFlippedCard = this; // Store the currently flipped card
+          });
+      });
+  </script>
 
   </body>
 </html>
