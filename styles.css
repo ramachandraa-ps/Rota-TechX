@@ -1403,12 +1403,19 @@ section.hero {
   justify-content: space-around;
   gap: 4rem;
   flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
 .footer-section {
+  text-align: center; /* Centers inline elements like h3 */
   flex: 1;
   min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
 }
+
 
 .footer-section h3 {
   font-family: "Space Grotesk", sans-serif;
@@ -1417,6 +1424,8 @@ section.hero {
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-section h3::after {
@@ -1428,7 +1437,10 @@ section.hero {
   height: 3px;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   border-radius: 2px;
+  
 }
+
+
 
 .venue-details {
   display: flex;
@@ -1445,13 +1457,17 @@ section.hero {
 
 .venue-details p {
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: bold;
+  color: whitesmoke;
 }
 
 .connect-links {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .social-link {
@@ -1487,6 +1503,8 @@ section.hero {
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-email i {
@@ -1512,6 +1530,8 @@ section.hero {
   font-size: 0.9rem;
 }
 
+
+
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 1.5rem 1.5rem;
@@ -1520,16 +1540,22 @@ section.hero {
   .footer-content {
     flex-direction: column;
     gap: 3rem;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-section {
     text-align: center;
     min-width: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-section h3::after {
     left: 50%;
     transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
   }
 
   .venue-details {
@@ -2497,6 +2523,7 @@ ul li:focus-within .date {
     font-size: 1rem;
     color: #666;
 }
+
 
 #bg-video {
   position: fixed; /* Keep it fixed as a background */
