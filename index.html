@@ -33,6 +33,7 @@
           <li><a href="#problemstatements">Domains</a></li>
           <!--<li><a href="#speakers">Speakers</a></li>-->
           <li><a href="#team-section">Our Team</a></li>
+          <li><a href="#gallery">Event Highlights</a></li>
           <li><a href="#partners">Partners</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ol>
@@ -310,6 +311,12 @@
   
           </div>
 
+          <div class="abstract-content">
+            <p class="abstract-title"> Download Abstract </p>
+            <p class="abstract-text">
+              Start Round 1 by submitting your abstract! Use the official template, follow the structure, and make it stand out!
+            </p>
+        </div>
           <div class="cta-buttons">
             <div>
                <button class="primary-btn"><a href="assets/images/Rota-TechX Abstract.pptx" download class="download-btn" style="color: whitesmoke;">Abstract</a></button>
@@ -637,7 +644,7 @@
                 <div class="team-member">
                   <img src="assets/images/madhushree.jpeg" alt="Team Member">
                   <div class="member-info">
-                      <h3>Rtr. Madhushree SN</h3>
+                      <h3>Rtr. Madhushree</h3>
                       <p>Editorial Head</p>
                       <div class="parent-div">
                         <div class="info-links">
@@ -737,6 +744,28 @@
                   </div>
               </div>
       </section>
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Event Highlights</h2>
+            <!-- <p class="gallery">A glimpse into our past events and unforgettable moments.</p> -->
+    
+            <div class="gallery-wrapper">
+                <button class="prev-btn" onclick="prevSlide()">&#10094;</button>
+                <div class="gallery-slider">
+                    <img src="assets/images/2 (1).jpg" class="gallery-image" alt="Event Photo 1">
+                    <img src="assets/images/4 (1).jpg" class="gallery-image" alt="Event Photo 2">
+                    <img src="assets/images/6 (1).jpg" class="gallery-image" alt="Event Photo 3">
+                    <img src="assets/images/8 (1).jpg" class="gallery-image" alt="Event Photo 4">
+                    <img src="assets/images/1 (1).png" class="gallery-image" alt="Event Photo 5">
+                    <img src="assets/images/3 (1).png" class="gallery-image" alt="Event Photo 6">
+                    <!-- <img src="assets/images/6 (1).png" class="gallery-image" alt="Event Photo 7"> -->
+                </div>
+                <button class="next-btn" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    
 
   <div class="space_it"></div>
 
@@ -1037,6 +1066,32 @@
               lastFlippedCard = this; // Store the currently flipped card
           });
       });
+
+      let currentSlide = 0;
+const slides = document.querySelectorAll(".gallery-image");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) {
+            slide.classList.add("active");
+        }
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+// Show the first image on page load
+showSlide(currentSlide);
+
   </script>
 
   </body>
