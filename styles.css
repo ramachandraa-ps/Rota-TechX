@@ -2984,3 +2984,76 @@ ul li:focus-within .date {
   }
 }
 
+@media (max-width: 768px) {
+  .speakers-grid {
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 2rem;
+  }
+
+  .speaker-card {
+    width: 260px;
+    height: 420px;
+  }
+
+  .speaker-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .speaker-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .speaker-role {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .speakers-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .speaker-card {
+    width: 90%;
+    max-width: 320px;
+    height: 400px;
+    padding: 8px;
+  }
+
+  .speaker-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .speaker-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .speaker-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .speaker-card {
+    width: 90%;
+    max-width: 280px;
+    height: 380px;
+    padding: 6px;
+  }
+
+  .speaker-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .speaker-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .speaker-role {
+    font-size: 0.8rem;
+  }
+}
