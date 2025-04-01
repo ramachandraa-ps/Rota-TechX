@@ -543,14 +543,26 @@ section.hero {
 
 /* Speakers Section */
 .speakers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
   gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  
 }
 
 .speaker-card {
   text-align: center;
+  height: 450px;
+  width: 300px;
   transition: transform 0.3s ease;
+  /* background-image: url("assets/images/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 10px; */
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .speaker-card:hover {
@@ -570,12 +582,12 @@ section.hero {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color:#3cdfff;
 }
 
 .speaker-role {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+  color:#e6f1ff;
+  font-size: 1.2rem;
 }
 
 /* FAQ Section */
@@ -1082,8 +1094,8 @@ section.hero {
 
 .connect-links {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 2rem;
+  margin: 2rem;
   justify-content: center;
   align-items: center;
 
