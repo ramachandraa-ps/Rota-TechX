@@ -295,6 +295,7 @@ nav.scrolled {
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* optional soft glow */
   color: #007bff; /* match the gradient for text */
+  margin-top: 4rem;
 }
 
 .results-announcement p {
